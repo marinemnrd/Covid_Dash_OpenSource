@@ -21,17 +21,17 @@ pip install -r requirements.txt
 
 ## Launching the App
 
-Run the following line in the terminal then go to the suggested URL.
+Run the following line in the terminal then go to the suggested URL. It will launch the Dashboard locally.
 
 ```
 streamlit run app.py
 ```
-It will launch locally the Dashboard 
+Enjoy ! 
 
 ## Web 
 
-The project is Hosted by streamlit
-Please clic on this [link](link) to visualize the dashboard.
+The project is Hosted by streamlit.
+You can also clic on this [link](link) to visualize the dashboard.
 
 ## Made with
 
