@@ -27,33 +27,27 @@ Covid Open Source Dashboard is an interactive Visualisation tool provinding an o
 
 All the Datas Are provided as open-data by the [Johns Hopkins University](https://github.com/CSSEGISandData/COVID-19).
 
-## Pour commencer
+ # Set Up 
+ 
+Create a python virtual environnemnt and install the requirement.txt package using pip :
 
-Entrez ici les instructions pour bien débuter avec votre projet...
+```
+pip install -r requirements.txt
+```
 
-### Pré-requis
+# Launching the App
 
-Ce qu'il est requis pour commencer avec votre projet...
+Run the following line in the terminal then go to the suggested URL.
 
-- Programme 1
-- Programme 2
-- etc...
+```
+streamlit run app.py
+```
+It will launch locally the Dashboard 
 
-### Installation
-
-Les étapes pour installer votre programme....
-
-Dites ce qu'il faut faire...
-
-_exemple_: Executez la commande ``telnet mapscii.me`` pour commencer ensuite [...]
-
-
-Ensuite vous pouvez montrer ce que vous obtenez au final...
-
-## Launching
+## Web 
 
 The project is Hosted by streamlit
-Please clic on this link : (link)
+Please clic on this link for  : (link)
 
 ## Fabriqué avec
 
@@ -63,9 +57,7 @@ _exemples :_
 * [Materialize.css](http://materializecss.com) - Framework CSS (front-end)
 * [Atom](https://atom.io/) - Editeur de textes
 
-## Contributing
 
-Si vous souhaitez contribuer, lisez le fichier [CONTRIBUTING.md](https://example.org) pour savoir comment le faire.
 
 ## Versions
 Listez les versions ici 
@@ -75,15 +67,15 @@ _exemple :_
 Liste des versions : [Cliquer pour afficher](https://github.com/your/project-name/tags)
 _(pour le lien mettez simplement l'URL de votre projets suivi de ``/tags``)_
 
-## Auteurs
-Listez le(s) auteur(s) du projet ici !
-* **Jhon doe** _alias_ [@outout14](https://github.com/outout14)
+## Authors
 
-Lisez la liste des [contributeurs](https://github.com/your/project/contributors) pour voir qui à aidé au projet !
-
-_(pour le lien mettez simplement l'URL de votre projet suivi de ``/contirubors``)_
+* **Marine** [@MarineMnrd](https://github.com/marinemnrd)
+* **Elysabeth** [@Lily87-hub](https://github.com/Lily87-hub)
+* **Paul** [@paulmontecot](https://github.com/paulmontecot)
 
 ## License
 
-Ce projet est sous licence ``exemple: WTFTPL`` - voir le fichier [LICENSE.md](LICENSE.md) pour plus d'informations
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+
 
