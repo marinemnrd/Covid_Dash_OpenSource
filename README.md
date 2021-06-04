@@ -33,7 +33,7 @@ It will launch locally the Dashboard
 The project is Hosted by streamlit
 Please clic on this [link](link) to visualize the dashboard.
 
-## Fabriqué avec
+## Made with
 
 Voici les programmes/logiciels/ressources que nous avons utilisé pour développer notre projet. 
 
