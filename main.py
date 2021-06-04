@@ -25,3 +25,4 @@ print(case)
 
 fig = px.line(df_case, x=df_case['Date'], y=case)
 st.write(fig)
+#Checking that everything works 
