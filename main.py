@@ -34,7 +34,7 @@ st.markdown(("* Fever or chills\n* Cough\n"
              "* Nausea or vomiting\n"
              "* Diarrhea"))
 
-df_case = pd.read_csv(r'C:\Users\CRI User\Documents\GitHub\Covid_Dash_OpenSource\Datas\Clean_Case.csv',header=1)
+df_case = pd.read_csv(r'https://raw.githubusercontent.com/marinemnrd/Covid_Dash_OpenSource/main/Datas/Clean_Case.csv',header=1)
 df_case = df_case.T
 df_case.columns = df_case.iloc[1]
 df_case= df_case.reset_index()
