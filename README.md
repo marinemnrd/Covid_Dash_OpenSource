@@ -1,22 +1,6 @@
-# Covid_Dash_OpenSource
-Creating an interactive Covid19 Dashboard for the OpenSource class
+# Covid Open Source DashBoard 📈  <p style='text-align: right;'> ![this](https://coronavirus.jhu.edu/static/media/jhu-logo-white-horizontal.68872b26.svg) </p>
 
-## Final result and data exploration features
-Your dashboard should be interactive and allow the user to:
-1. Select which countries to display (among a pre-defined list).
-2. Select which time period to display.
-3. Select which variable(s) to display: 
-      1. number / cumulated number / 7-day rolling average of confirmed cases / deaths (recovered)
-      2. Upon parameter selection, graphics should be updated dynamically.
-
-4. You could also implement peak detection with the first numeric derivative.
-
-
-
-# Project Title
-Covid Open Source DashBoard 📈
-
-# Project Description
+## Project Description
 
 Covid Open Source Dashboard is an interactive Visualisation tool provinding an overview of the evolution of different Covid Pandemic indicators as a function of time. The available Indicators are : 
 - Number of cases
@@ -27,7 +11,7 @@ Covid Open Source Dashboard is an interactive Visualisation tool provinding an o
 
 All the Datas Are provided as open-data by the [Johns Hopkins University](https://github.com/CSSEGISandData/COVID-19).
 
- # Set Up 
+ ## Set Up 
  
 Create a python virtual environnemnt and install the requirement.txt package using pip :
 
@@ -35,7 +19,7 @@ Create a python virtual environnemnt and install the requirement.txt package usi
 pip install -r requirements.txt
 ```
 
-# Launching the App
+## Launching the App
 
 Run the following line in the terminal then go to the suggested URL.
 
@@ -47,17 +31,19 @@ It will launch locally the Dashboard
 ## Web 
 
 The project is Hosted by streamlit
-Please clic on this link for  : (link)
+Please clic on this [link](link) to visualize the dashboard.
 
 ## Fabriqué avec
 
-Entrez les programmes/logiciels/ressources que vous avez utilisé pour développer votre projet
+Voici les programmes/logiciels/ressources que nous avons utilisé pour développer notre projet. 
 
-_exemples :_
+* [Python 3.9](https://www.python.org/) - Programming language version 3.9
 * [Materialize.css](http://materializecss.com) - Framework CSS (front-end)
-* [Atom](https://atom.io/) - Editeur de textes
-
-
+* [Streamlit](https://streamlit.io/) - Open-source Python library 
+* [PyCharm](https://www.jetbrains.com/fr-fr/pycharm/) - IDE
+* [John Hopkins University Data](https://coronavirus.jhu.edu/map.html) - Coronavirus data used to build the Dash
+* [Jupyter Notebook](https://jupyter.org/) - Open-source web application to create and share code
+* [Deenote](https://deepnote.com/project/CovidDashOpenSource-vWDQOttkRneLrrNERsUCUg/%2Fnotebook.ipynb) - Data Science NoteBook
 
 ## Versions
 Listez les versions ici 
