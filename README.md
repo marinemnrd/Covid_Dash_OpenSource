@@ -16,12 +16,16 @@ Your dashboard should be interactive and allow the user to:
 # Project Title
 Covid Open Source DashBoard 📈
 
+# Project Description
+
 Covid Open Source Dashboard is an interactive Visualisation tool provinding an overview of the evolution of different Covid Pandemic indicators as a function of time. The available Indicators are : 
 - Number of cases
 - Cumulated Number of cases
 - Number of Deaths 
 - Cumulated Number of Deaths
 - 7-day rolling average of confirmed cases / deaths
+
+All the Datas Are provided as open-data by the [Johns Hopkins University](https://github.com/CSSEGISandData/COVID-19).
 
 ## Pour commencer
 
