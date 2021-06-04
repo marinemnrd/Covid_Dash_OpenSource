@@ -61,4 +61,4 @@ else :
 
     fig = px.line(df_Death, x=df_Death.index, y=death)
     st.write(fig)
-#Checking that everything works 
+#Checking that works
