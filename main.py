@@ -47,7 +47,7 @@ df_Recovered = df_Recovered.set_index(['Date'])
 selectbox = st.sidebar.selectbox('Type',('death','case'))
 
 if selectbox == 'death':
-
+    st.title("Cumulative number of deaths")
     case = st.multiselect('choose country',df_case.columns)
 
     print(case)
@@ -55,10 +55,10 @@ if selectbox == 'death':
     fig = px.line(df_case, x=df_case.index, y=case)
     st.write(fig)
 else :
+    st.title("Cumulative number of cases")
     death = st.multiselect('choose country', df_Death.columns)
 
     print(death)
 
     fig = px.line(df_Death, x=df_Death.index, y=death)
     st.write(fig)
-#Checking that everything works 
