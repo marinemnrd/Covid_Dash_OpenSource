@@ -35,7 +35,7 @@ Please clic on this [link](link) to visualize the dashboard.
 
 ## Made with
 
-Voici les programmes/logiciels/ressources que nous avons utilisé pour développer notre projet. 
+Here are the programs / software / resources that we used to develop our project.
 
 * [Python 3.9](https://www.python.org/) - Programming language version 3.9
 * [Materialize.css](http://materializecss.com) - Framework CSS (front-end)
@@ -44,14 +44,6 @@ Voici les programmes/logiciels/ressources que nous avons utilisé pour développ
 * [John Hopkins University Data](https://coronavirus.jhu.edu/map.html) - Coronavirus data used to build the Dash
 * [Jupyter Notebook](https://jupyter.org/) - Open-source web application to create and share code
 * [Deenote](https://deepnote.com/project/CovidDashOpenSource-vWDQOttkRneLrrNERsUCUg/%2Fnotebook.ipynb) - Data Science NoteBook
-
-## Versions
-Listez les versions ici 
-_exemple :_
-**Dernière version stable :** 5.0
-**Dernière version :** 5.1
-Liste des versions : [Cliquer pour afficher](https://github.com/your/project-name/tags)
-_(pour le lien mettez simplement l'URL de votre projets suivi de ``/tags``)_
 
 ## Authors
 
