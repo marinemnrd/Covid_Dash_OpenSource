@@ -6,6 +6,8 @@ import numpy as np
 import datetime
 import time
 
+
+
 st.sidebar.title("Menu")
 st.sidebar.radio("Navigate", ["Home", "Data", "Dashboard", "About"])
 st.sidebar.title("About")
@@ -19,7 +21,7 @@ st.sidebar.info("Feel free to comment on our work. The github link can be found 
                 "[here](https://github.com/marinemnrd/Covid_Dash_OpenSource)")
 
 
-st.title("OUR FIRST DASHBOARD HEHE")
+st.title("COVID DASHBOARD")
 st.write("""
 This web application will serve to analyze and visualize the spread of COVID-19""")
 st.markdown("## Symptoms")
@@ -40,18 +42,23 @@ df_Death = pd.read_csv(r'C:\Users\CRI User\Documents\GitHub\Covid_Dash_OpenSourc
 df_Death = df_Death.set_index(['Date'])
 df_Recovered = pd.read_csv(r'C:\Users\CRI User\Documents\GitHub\Covid_Dash_OpenSource\Datas\Clean_Recovered.csv')
 df_Recovered = df_Recovered.set_index(['Date'])
-st.title("OUR FIRST DASHBOARD HEHE")
-
-st.checkbox('first checkbox')
-print(df_case)
-print(df_Death)
-print(df_Recovered)
 
 
-case = st.selectbox('choose country',df_case.columns)
+selectbox = st.sidebar.selectbox('Type',('death','case'))
 
-print(case)
+if selectbox == 'death':
 
-fig = px.line(df_case, x=df_case.index, y=case)
-st.write(fig)
+    case = st.multiselect('choose country',df_case.columns)
+
+    print(case)
+
+    fig = px.line(df_case, x=df_case.index, y=case)
+    st.write(fig)
+else :
+    death = st.multiselect('choose country', df_Death.columns)
+
+    print(death)
+
+    fig = px.line(df_Death, x=df_Death.index, y=death)
+    st.write(fig)
 #Checking that everything works 
