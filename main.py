@@ -7,9 +7,10 @@ import datetime
 import time
 
 
-
+#Titles and Mode selections
 st.sidebar.title("Menu")
 st.sidebar.radio("Navigate", ["Home", "Data", "Dashboard", "About"])
+selectbox = st.sidebar.selectbox('Type',('death','case'))
 st.sidebar.title("About")
 st.sidebar.info(
     """
@@ -35,7 +36,7 @@ st.markdown(("* Fever or chills\n* Cough\n"
              "* Congestion or runny nose\n"
              "* Nausea or vomiting\n"
              "* Diarrhea"))
-
+#Load Data
 df_case = pd.read_csv(r'C:\Users\CRI User\Documents\GitHub\Covid_Dash_OpenSource\Datas\Clean_Confirmed_Case.csv')
 df_case = df_case.set_index(['Date'])
 df_Death = pd.read_csv(r'C:\Users\CRI User\Documents\GitHub\Covid_Dash_OpenSource\Datas\Clean_Death.csv')
@@ -43,9 +44,7 @@ df_Death = df_Death.set_index(['Date'])
 df_Recovered = pd.read_csv(r'C:\Users\CRI User\Documents\GitHub\Covid_Dash_OpenSource\Datas\Clean_Recovered.csv')
 df_Recovered = df_Recovered.set_index(['Date'])
 
-
-selectbox = st.sidebar.selectbox('Type',('death','case'))
-
+#Plot
 if selectbox == 'death':
     st.title("Cumulative number of deaths")
     case = st.multiselect('choose country',df_case.columns)
