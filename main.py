@@ -36,12 +36,15 @@ st.markdown(("* Fever or chills\n* Cough\n"
              "* Congestion or runny nose\n"
              "* Nausea or vomiting\n"
              "* Diarrhea"))
+
+st.image('monalisa.jpeg')
+
 #Load Data
-df_case = pd.read_csv(r'C:\Users\CRI User\Documents\GitHub\Covid_Dash_OpenSource\Datas\Clean_Confirmed_Case.csv')
+df_case = pd.read_csv(r'https://raw.githubusercontent.com/marinemnrd/Covid_Dash_OpenSource/main/Datas/Clean_Confirmed_Case.csv')
 df_case = df_case.set_index(['Date'])
-df_Death = pd.read_csv(r'C:\Users\CRI User\Documents\GitHub\Covid_Dash_OpenSource\Datas\Clean_Death.csv')
+df_Death = pd.read_csv(r'https://raw.githubusercontent.com/marinemnrd/Covid_Dash_OpenSource/main/Datas/Clean_Death.csv')
 df_Death = df_Death.set_index(['Date'])
-df_Recovered = pd.read_csv(r'C:\Users\CRI User\Documents\GitHub\Covid_Dash_OpenSource\Datas\Clean_Recovered.csv')
+df_Recovered = pd.read_csv(r'https://raw.githubusercontent.com/marinemnrd/Covid_Dash_OpenSource/main/Datas/Clean_Recovered.csv')
 df_Recovered = df_Recovered.set_index(['Date'])
 
 #Plot
@@ -53,7 +56,7 @@ if selectbox == 'death':
 
     fig = px.line(df_case, x=df_case.index, y=case)
     st.write(fig)
-else :
+else:
     st.title("Cumulative number of cases")
     death = st.multiselect('choose country', df_Death.columns)
 
