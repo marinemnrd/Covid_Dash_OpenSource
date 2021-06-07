@@ -37,6 +37,7 @@ st.markdown(("* Fever or chills\n* Cough\n"
              "* Nausea or vomiting\n"
              "* Diarrhea"))
 
+
 st.image('monalisa.jpeg')
 
 #Load Data
