@@ -48,7 +48,11 @@ df_Death = df_Death.set_index(['Date'])
 df_Recovered = pd.read_csv(r'https://raw.githubusercontent.com/marinemnrd/Covid_Dash_OpenSource/main/Datas/Clean_Recovered.csv')
 df_Recovered = df_Recovered.set_index(['Date'])
 
-#Plot
+
+#Chart the Datas
+selectbox = st.sidebar.selectbox('Type',('death','case'))
+
+
 if selectbox == 'death':
     st.title("Cumulative number of deaths")
     case = st.multiselect('choose country',df_case.columns)
