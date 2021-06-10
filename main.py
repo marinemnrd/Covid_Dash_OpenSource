@@ -3,8 +3,10 @@ import pandas as pd
 # from plotly import plotly
 import plotly.express as px
 import numpy as np
-import datetime
+#import datetime
 import time
+#import datetime
+from datetime import datetime
 
 
 #Titles and Mode selections
@@ -41,28 +43,45 @@ st.markdown(("* Fever or chills\n* Cough\n"
 st.image('monalisa.jpeg')
 
 #Load Data
-df_case = pd.read_csv(r'https://raw.githubusercontent.com/marinemnrd/Covid_Dash_OpenSource/main/Datas/Clean_Confirmed_Case.csv')
+df_case = pd.read_csv(r'https://raw.githubusercontent.com/marinemnrd/Covid_Dash_OpenSource/main/Datas/Clean_Confirmed_Case.csv', parse_dates=['Date'])
 df_case = df_case.set_index(['Date'])
-df_Death = pd.read_csv(r'https://raw.githubusercontent.com/marinemnrd/Covid_Dash_OpenSource/main/Datas/Clean_Death.csv')
+df_Death = pd.read_csv(r'https://raw.githubusercontent.com/marinemnrd/Covid_Dash_OpenSource/main/Datas/Clean_Death.csv', parse_dates=['Date'])
 df_Death = df_Death.set_index(['Date'])
-df_Recovered = pd.read_csv(r'https://raw.githubusercontent.com/marinemnrd/Covid_Dash_OpenSource/main/Datas/Clean_Recovered.csv')
-df_Recovered = df_Recovered.set_index(['Date'])
 
 
 #Chart the Datas
-selectbox = st.sidebar.selectbox('Type',('death','case'))
+defaultcol = df_case['France']
 
 
-if selectbox == 'death':
-    st.title("Cumulative number of deaths")
-    case = st.multiselect('choose country',df_case.columns)
+if selectbox == 'case':
+    st.title("Cumulative number of cases")
+    min_ts = min(df_case.index).to_pydatetime()
+    max_ts = max(df_case.index).to_pydatetime()
+
+    # slider to chose date
+    st.sidebar.subheader("Inputs")
+    min_selection, max_selection = st.sidebar.slider("Timeline", min_value=min_ts, max_value=max_ts,
+                                                     value=[min_ts, max_ts])
+    df_case = df_case[(df_case.index >= min_selection) & (df_case.index <= max_selection)]
+    case = st.multiselect('choose country', df_case.columns)
+
+
 
     print(case)
 
+    #fig = px.line(df_case, x=df_case.index, y=case)
     fig = px.line(df_case, x=df_case.index, y=case)
+
     st.write(fig)
 else:
-    st.title("Cumulative number of cases")
+    st.title("Cumulative number of deaths")
+    min_ts = min(df_Death.index).to_pydatetime()
+    max_ts = max(df_Death.index).to_pydatetime()
+    # slider to chose date
+    st.sidebar.subheader("Inputs")
+    min_selection, max_selection = st.sidebar.slider("Timeline", min_value=min_ts, max_value=max_ts,
+                                                     value=[min_ts, max_ts])
+    df_Death = df_Death[(df_Death.index >= min_selection) & (df_Death.index <= max_selection)]
     death = st.multiselect('choose country', df_Death.columns)
 
     print(death)
