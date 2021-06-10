@@ -12,7 +12,7 @@ from datetime import datetime
 #Titles and Mode selections
 st.sidebar.title("Menu")
 st.sidebar.radio("Navigate", ["Home", "Data", "Dashboard", "About"])
-selectbox = st.sidebar.selectbox('Type',('death','case'))
+selectbox = st.sidebar.selectbox('Type',('Deaths','Cases','Normalised Deaths', 'Normalised Cases'))
 st.sidebar.title("About")
 st.sidebar.info(
     """
@@ -43,17 +43,25 @@ st.markdown(("* Fever or chills\n* Cough\n"
 st.image('monalisa.jpeg')
 
 #Load Data
+#st.cache
+#def loaddata():
 df_case = pd.read_csv(r'https://raw.githubusercontent.com/marinemnrd/Covid_Dash_OpenSource/main/Datas/Clean_Confirmed_Case.csv', parse_dates=['Date'])
 df_case = df_case.set_index(['Date'])
 df_Death = pd.read_csv(r'https://raw.githubusercontent.com/marinemnrd/Covid_Dash_OpenSource/main/Datas/Clean_Death.csv', parse_dates=['Date'])
 df_Death = df_Death.set_index(['Date'])
+df_normcase = pd.read_csv(r"C:\Users\CRI User\Desktop\Normalisedcase.csv", parse_dates=['Date'])
+df_normcase = df_normcase.set_index(['Date'])
+df_normdeath = pd.read_csv(r"C:\Users\CRI User\Desktop\Normaliseddead.csv",  parse_dates=['Date'])
+df_normdeath = df_normdeath.set_index(['Date'])
 
+#loaddata()
 
+print (df_normcase)
 #Chart the Datas
-defaultcol = df_case['France']
+#defaultcol = df_case['France']
 
 
-if selectbox == 'case':
+if selectbox == 'Cases':
     st.title("Cumulative number of cases")
     min_ts = min(df_case.index).to_pydatetime()
     max_ts = max(df_case.index).to_pydatetime()
@@ -73,7 +81,7 @@ if selectbox == 'case':
     fig = px.line(df_case, x=df_case.index, y=case)
 
     st.write(fig)
-else:
+elif selectbox == 'Deaths':
     st.title("Cumulative number of deaths")
     min_ts = min(df_Death.index).to_pydatetime()
     max_ts = max(df_Death.index).to_pydatetime()
@@ -87,4 +95,38 @@ else:
     print(death)
 
     fig = px.line(df_Death, x=df_Death.index, y=death)
+    st.write(fig)
+
+elif selectbox == 'Normalised Cases':
+
+    st.title("Cumulative number of Cases for 100 000Hab")
+    min_ts = min(df_normcase.index).to_pydatetime()
+    max_ts = max(df_normcase.index).to_pydatetime()
+    # slider to chose date
+    st.sidebar.subheader("Inputs")
+    min_selection, max_selection = st.sidebar.slider("Timeline", min_value=min_ts, max_value=max_ts,
+                                                     value=[min_ts, max_ts])
+    df_normcase = df_normcase[(df_normcase.index >= min_selection) & (df_normcase.index <= max_selection)]
+    normcase = st.multiselect('choose country', df_normcase.columns)
+
+    print(normcase)
+
+    fig = px.line(normcase, x=df_normcase.index, y=normcase)
+    st.write(fig)
+
+else:
+
+    st.title("Cumulative number of Cases for 100 000Hab")
+    min_ts = min(df_normdeath.index).to_pydatetime()
+    max_ts = max(df_normdeath.index).to_pydatetime()
+    # slider to chose date
+    st.sidebar.subheader("Inputs")
+    min_selection, max_selection = st.sidebar.slider("Timeline", min_value=min_ts, max_value=max_ts,
+                                                     value=[min_ts, max_ts])
+    df_normdeath = df_normdeath[(df_normdeath.index >= min_selection) & (df_normdeath.index <= max_selection)]
+    normdeath = st.multiselect('choose country', df_normdeath.columns)
+
+    print(normdeath)
+
+    fig = px.line(normdeath, x=df_normdeath.index, y=normdeath)
     st.write(fig)
