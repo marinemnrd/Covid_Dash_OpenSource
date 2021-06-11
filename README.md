@@ -6,10 +6,13 @@
 
 Table of Content
 -----------------
-* [Interactive-Covid-19-Dashboard](#Interactive-Covid-19-Dashboard)
-  * [Project Description](#Project-Description-)
-  * [Launching the App](#Launching-the-App)
-  * [License](#License)
+  * Project Description
+  * Set up
+  * Launching the App
+  * The dashboard
+  * Made with
+  * Authors
+  * License
 
 
 # Project Description :clipboard:
