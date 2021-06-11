@@ -10,7 +10,7 @@ from datetime import datetime
 st.sidebar.title("About Us")
 st.sidebar.info(
     """
-    The aim of this project is to create an interactive Covid-19 Dashboard. This app is maintained by Team 6 of the Open Source course for second semester Master 1 of Digital Sciences.
+    The aim of this project is to create an interactive Covid-19 Dashboard. This app is maintained by Team number 6 of the Open Source course for the second semester of Master 1 - Digital Sciences.
     Contributors of this project are Paul Montecot Grall, Marine Menardin and Elizabeth Afolabi.
     """
 )
