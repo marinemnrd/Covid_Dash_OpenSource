@@ -22,7 +22,7 @@ Covid Open Source Dashboard is an interactive Visualisation tool provinding an o
 - Cumulated Number of cases
 - Cumulated Number of deaths
 
-All the Datas Are provided as open-data by the [Johns Hopkins University](https://github.com/CSSEGISandData/COVID-19) and [Kaggle](https://www.kaggle.com/tanuprabhu/population-by-country-2020).
+All the Datas Are provided as an Open-Data by the [Johns Hopkins University](https://github.com/CSSEGISandData/COVID-19) and [Kaggle](https://www.kaggle.com/tanuprabhu/population-by-country-2020).
 
 
  # Set Up :wrench:
