@@ -60,7 +60,7 @@ Enjoy !
 # Web 
 
 The project is Hosted by streamlit.
-You can also clic on this [link](https://share.streamlit.io/paulmontecot/covid_dash_opensource/main/main.py) to visualize the dashboard.
+You can also click on this [link](https://share.streamlit.io/paulmontecot/covid_dash_opensource/main/main.py) to visualize the dashboard.
 
 # Made with
 
