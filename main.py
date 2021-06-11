@@ -39,24 +39,64 @@ st.markdown(("* Fever or chills\n* Cough\n"
              "* Nausea or vomiting\n"
              "* Diarrhea"))
 
+dfpop = pd.read_csv(r'C:\Users\CRI User\Documents\GitHub\Covid_Dash_OpenSource\Datas\population_by_country_2020.csv')
+dfpop = dfpop.iloc[:, 0:2]
+#Read Data
+dfdead = pd.read_csv(r'C:\Users\CRI User\Documents\GitHub\Covid_Dash_OpenSource\Datas\time_series_covid19_deaths_global.csv')
+#Set up Dataset
+dfdead =dfdead.drop(['Lat', 'Long'],axis=1)
+dfdead =dfdead.drop(['Province/State'],axis=1)
+dfdead = dfdead.groupby(['Country/Region']).sum()
+#Apply the operation for normalisation
+dfdead = dfdead.applymap(lambda x: x*100000)
+#Merge Dataset with Pop Datas For Division
+dfmerged = pd.merge(dfdead, dfpop,how = 'inner', left_on = dfdead.index , right_on = dfpop['Country (or dependency)'] )
+dfmerged = dfmerged.drop(columns=dfmerged.columns[0],
+        )
+dfmerged = dfmerged.set_index('Country (or dependency)')
+#Divise All Columns to the Population Column for having data*100000/Pop
+dfnorm = dfmerged.div(dfmerged['Population (2020)'], axis='index')
+#Formating for Plotting
+dfnorm = dfnorm.T.reset_index().reindex()
+dfnorm =dfnorm.rename(columns = {'index':'Date'})
+dfnorm = dfnorm[:-1]
+dfnorm['Date'] = pd.to_datetime(dfnorm['Date']).dt.date
+dfnorm = dfnorm.set_index(['Date'])
+dfnorm = dfnorm.astype(int)
+#Upload the .csv
+df_normdeath = dfnorm
+#dfnormdead.to_csv('Normaliseddead')
+
+
+
+
+
+
+
+
+
+
+
 
 #Load Data
-
 
 df_case = pd.read_csv(r'https://raw.githubusercontent.com/marinemnrd/Covid_Dash_OpenSource/main/Datas/Clean_Confirmed_Case.csv', parse_dates=['Date'])
 df_case = df_case.set_index(['Date'])
 df_Death = pd.read_csv(r'https://raw.githubusercontent.com/marinemnrd/Covid_Dash_OpenSource/main/Datas/Clean_Death.csv', parse_dates=['Date'])
 df_Death = df_Death.set_index(['Date'])
-df_normcase = pd.read_csv(r"C:\Users\CRI User\Desktop\Normalisedcase.csv", sep=',', parse_dates=['Date'])
+df_normcase = pd.read_csv(r"C:\Users\CRI User\Desktop\Normalisedcase.csv", parse_dates=['Date'])
 df_normcase = df_normcase.set_index(['Date'])
-df_normdeath = pd.read_csv(r"C:\Users\CRI User\Desktop\Normaliseddead.csv",  parse_dates=['Date'])
-df_normdeath = df_normdeath.set_index(['Date'])
+#df_normdeath = pd.read_csv(r"C:\Users\CRI User\Desktop\Normaliseddead.csv",  parse_dates=['Date'])
+#df_normdeath = df_normdeath.set_index(['Date'])
 
 
 print (df_case)
 print (df_normcase)
+print (df_case.columns)
+print (df_normcase.columns)
 #Chart the Datas
 #defaultcol = df_case['France']
+
 
 
 if selectbox == 'Cases':
@@ -71,6 +111,8 @@ if selectbox == 'Cases':
                                                      value=[min_ts, max_ts])
     df_case = df_case[(df_case.index >= min_selection) & (df_case.index <= max_selection)]
     case = st.multiselect('choose country', df_case.columns)
+    if case == []:
+        st.error("Please select at least one category.")
 
 
 
@@ -91,6 +133,8 @@ elif selectbox == 'Deaths':
                                                      value=[min_ts, max_ts])
     df_Death = df_Death[(df_Death.index >= min_selection) & (df_Death.index <= max_selection)]
     death = st.multiselect('choose country', df_Death.columns)
+    if death == []:
+        st.error("Please select at least one category.")
 
     print(death)
 
@@ -109,6 +153,8 @@ elif selectbox == 'Normalised Cases':
                                                      value=[min_ts, max_ts])
     df_normcase = df_normcase[(df_normcase.index >= min_selection) & (df_normcase.index <= max_selection)]
     normcase = st.multiselect('choose country', df_normcase.columns)
+    if normcase == []:
+        st.error("Please select at least one category.")
 
     print(normcase)
 
@@ -117,19 +163,21 @@ elif selectbox == 'Normalised Cases':
 
 else:
 
-    st.title("Cumulative number of Cases for 100 000Hab")
+    st.title("Cumulative number of Deaths for 100 000Hab")
     st.text("")
     df_normdeath = pd.DataFrame(df_normdeath)
-    min_ts = min(df_normdeath.index).to_pydatetime()
-    max_ts = max(df_normdeath.index).to_pydatetime()
+    min_ts = min(df_normdeath.index)#.to_pydatetime()
+    max_ts = max(df_normdeath.index)#.to_pydatetime()
     # slider to chose date
     st.sidebar.subheader("Date")
     min_selection, max_selection = st.sidebar.slider("Timeline", min_value=min_ts, max_value=max_ts,
                                                      value=[min_ts, max_ts])
     df_normdeath = df_normdeath[(df_normdeath.index >= min_selection) & (df_normdeath.index <= max_selection)]
     normdeath = st.multiselect('choose country', df_normdeath.columns)
+    if normdeath == []:
+        st.error("Please select at least one category.")
 
     print(normdeath)
 
-    fig = px.line(normdeath, x=df_normdeath.index, y=normdeath)
+    fig = px.line(normdeath, x=df_normdeath.index, y=df_normdeath['France'])
     st.write(fig)
