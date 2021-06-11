@@ -24,12 +24,18 @@ Covid Open Source Dashboard is an interactive Visualisation tool provinding an o
 All the Datas Are provided as open-data by the [Johns Hopkins University](https://github.com/CSSEGISandData/COVID-19) and [Kaggle](https://www.kaggle.com/tanuprabhu/population-by-country-2020).
 
  # Set Up 
+Clone this repository using command 
+
+```
+git clone https://github.com/marinemnrd/Covid_Dash_OpenSource.git
+```
  
 Create a python virtual environnemnt and install the requirement.txt package using pip :
 
 ```
 pip install -r requirements.txt
 ```
+Open your favourite IDE, open the project and you are ready to launch the app !
 
 # Launching the App
 
