@@ -19,8 +19,8 @@ Table of Content
 
 Covid Open Source Dashboard is an interactive Visualisation tool provinding an overview of the evolution of different Covid Pandemic indicators as a function of time. The available Indicators are : 
 
-- Cumulated Number of cases
-- Cumulated Number of deaths
+- Cumulated Number of Cases
+- Cumulated Number of Deaths
 
 All the Datas Are provided as an Open-Data by the [Johns Hopkins University](https://github.com/CSSEGISandData/COVID-19) and [Kaggle](https://www.kaggle.com/tanuprabhu/population-by-country-2020).
 
