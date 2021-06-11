@@ -29,7 +29,7 @@ st.markdown("# A Summary of Covid-19")
 st.write("""
 COVID-19 is a virus caused by acute respiratory syndrome coronavirus 2 (SARS-CoV-2). The COVID-19 pandemic, also known as the coronavirus pandemic, is an ongoing global pandemic of coronavirus disease 2019 (COVID-19), 
 The virus was first identified in December 2019 in Wuhan, China. The World Health Organization declared a Public Health Emergency of International Concern regarding COVID-19 on 30 January 2020, and later declared a pandemic on 11 March 2020. As of 11 June 2021, 
-more than 174 million cases have been confirmed, with more than 3.77 million confirmed deaths attributed to COVID-19, making it one of the deadliest pandemics in history.
+more than 174 million cases have been confirmed, with more than 3.77 million confirmed deaths attributed to COVID-19, making it one of the deadliest pandemics in history.""")
 st.markdown("## Symptoms")
 st.markdown(("* Fever or chills\n* Cough\n"
              "* Shortness of breath or difficulty breathing\n"
