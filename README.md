@@ -6,15 +6,19 @@
 ## Project Description
 
 Covid Open Source Dashboard is an interactive Visualisation tool provinding an overview of the evolution of different Covid Pandemic indicators as a function of time. The available Indicators are : 
-- Number of cases
-- Cumulated Number of cases
-- Number of Deaths 
+- Cumulated Number of cases 
 - Cumulated Number of Deaths
-- 7-day rolling average of confirmed cases / deaths
+- Cumulated Normalised Number of Deaths
+- Cumulated Normalised Number of Cases
 
 All the Datas Are provided as open-data by the [Johns Hopkins University](https://github.com/CSSEGISandData/COVID-19) and [Kaggle](https://www.kaggle.com/tanuprabhu/population-by-country-2020).
 
  ## Set Up 
+ 
+ Clone this repository 
+ ```
+ $ git clone https://github.com/marinemnrd/Covid_Dash_OpenSource.git
+ ```
  
 Create a python virtual environnemnt and install the requirement.txt package using pip :
 
