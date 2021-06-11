@@ -29,6 +29,11 @@ Create a python virtual environnemnt and install the requirement.txt package usi
 
 ```
 pip install -r requirements.txt
+pip install numpy
+pip install pandas
+pip install streamlit
+pip install plotly
+
 ```
 
 # Launching the App
@@ -36,7 +41,7 @@ pip install -r requirements.txt
 Run the following line in the terminal then go to the suggested URL. It will launch the Dashboard locally.
 
 ```
-streamlit run app.py
+streamlit run main.py
 ```
 Enjoy ! 
 
