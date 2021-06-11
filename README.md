@@ -63,7 +63,7 @@ streamlit run main.py
 
 # Web :computer:
 
-The project is Hosted by streamlit.
+The project is Hosted by Streamlit.
 You can also click on this [link](https://share.streamlit.io/paulmontecot/covid_dash_opensource/main/main.py) to visualize the dashboard.
 
 
