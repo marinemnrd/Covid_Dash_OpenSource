@@ -9,7 +9,7 @@ Table of Content
   * Project Description
   * Set up
   * Launching the App
-  * The dashboard
+  * The Dashboard
   * Made with
   * Authors
   * License
