@@ -13,7 +13,8 @@ from datetime import datetime
 st.sidebar.title("About")
 st.sidebar.info(
     """
-    This app is maintained by Team 6, Paul, Marine and Elizabeth.
+    This app is maintained by Team 6 of the Open Source course for second semester Master 1 of Digital Sciences.
+    Contributors of this project are Paul Montecot Grall, Marine Menardin and Elizabeth Afolabi.
     """
 )
 st.sidebar.title("Comment")
