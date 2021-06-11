@@ -40,7 +40,7 @@ st.markdown(("* Fever or chills\n* Cough\n"
              "* Sore throat\n"
              "* Congestion or runny nose\n"
              "* Nausea or vomiting\n"
-             "* Diarrhea"))
+             "* Diarrhea\n"))
 
 #dfpop = pd.read_csv(r'https://github.com/marinemnrd/Covid_Dash_OpenSource/blob/0818ef95771496134f063c2948354b7d20c81306/Datas/population_by_country_2020.csv')
 #dfpop = dfpop.iloc[:, 0:2]
