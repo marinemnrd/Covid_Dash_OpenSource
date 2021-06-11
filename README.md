@@ -16,9 +16,8 @@ Table of Content
 # Project Description :clipboard:
 
 Covid Open Source Dashboard is an interactive Visualisation tool provinding an overview of the evolution of different Covid Pandemic indicators as a function of time. The available Indicators are : 
-- Number of cases
+
 - Cumulated Number of cases
-- Number of Deaths 
 - Cumulated Number of Deaths
 - 7-day rolling average of confirmed cases / deaths
 
