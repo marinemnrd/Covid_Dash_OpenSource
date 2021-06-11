@@ -7,7 +7,7 @@
 Table of Content
 -----------------
   * Project Description
-  * Set up
+  * Set Up
   * Launching the App
   * The Dashboard
   * Made with
