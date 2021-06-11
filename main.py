@@ -13,7 +13,7 @@ from datetime import datetime
 st.sidebar.title("About")
 st.sidebar.info(
     """
-    Thus app is maintained by Team 6, Paul, Marine and Elizabeth.
+    This app is maintained by Team 6, Paul, Marine and Elizabeth.
     """
 )
 st.sidebar.title("Comment")
@@ -143,7 +143,7 @@ elif selectbox == 'Deaths':
 
 elif selectbox == 'Normalised Cases':
 
-    st.title("Cumulative number of Cases for 100 000Hab")
+    st.title("Cumulative number of Cases for 100 000 Hab")
     st.text("")
     min_ts = min(df_normcase.index).to_pydatetime()
     max_ts = max(df_normcase.index).to_pydatetime()
@@ -163,7 +163,7 @@ elif selectbox == 'Normalised Cases':
 
 else:
 
-    st.title("Cumulative number of Deaths for 100 000Hab")
+    st.title("Cumulative number of deaths for 100 000 Hab")
     st.text("")
     df_normdeath = pd.DataFrame(df_normdeath)
     min_ts = min(df_normdeath.index)#.to_pydatetime()
