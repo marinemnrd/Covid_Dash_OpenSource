@@ -6,7 +6,7 @@
 
 Table of Content
 -----------------
-* [Interactive-Covid-19-Dashboard](#Interactive-Covid-19-Dashboard) (EN COURS)
+* [Interactive-Covid-19-Dashboard](#Interactive-Covid-19-Dashboard)
   * [Project Description](#Project-Description)
   * [Set Up](#Set-Up)
   * [Launching the App](#Launching-the-App)
