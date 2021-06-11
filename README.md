@@ -6,7 +6,7 @@
 
 Table of Content
 -----------------
-* [Interactive-Covid-19-Dashboard](#Interactive-Covid-19-Dashboard)
+* [Interactive-Covid-19-Dashboard](#Interactive-Covid-19-Dashboard) (EN COURS)
   * [Project Description](#Project-Description)
   * [Set Up](#Set-Up)
   * [Launching the App](#Launching-the-App)
@@ -29,11 +29,6 @@ Create a python virtual environnemnt and install the requirement.txt package usi
 
 ```
 pip install -r requirements.txt
-pip install numpy
-pip install pandas
-pip install streamlit
-pip install plotly
-
 ```
 
 # Launching the App
