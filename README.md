@@ -83,7 +83,7 @@ Here are the programs / software / resources that we used to develop our project
 ## Authors :crown:
 
 * **Marine** [@MarineMnrd](https://github.com/marinemnrd)
-* **Elysabeth** [@Lily87-hub](https://github.com/Lily87-hub)
+* **Elizabeth** [@Lily87-hub](https://github.com/Lily87-hub)
 * **Paul** [@paulmontecot](https://github.com/paulmontecot)
 
 
