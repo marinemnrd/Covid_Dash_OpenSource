@@ -3,22 +3,27 @@
 
 # Covid Open Source DashBoard 📈  <p style='text-align: right;'> ![this](https://coronavirus.jhu.edu/static/media/jhu-logo-white-horizontal.68872b26.svg) </p>
 
-## Project Description
+
+Table of Content
+-----------------
+* [Interactive-Covid-19-Dashboard](#Interactive-Covid-19-Dashboard)
+  * [Project Description](#ProjectDescription)
+  * [Set Up](#SetUp)
+  * [Launching the App](#LaunchingtheApp)
+  * [License](#License)
+
+# Project Description
 
 Covid Open Source Dashboard is an interactive Visualisation tool provinding an overview of the evolution of different Covid Pandemic indicators as a function of time. The available Indicators are : 
-- Cumulated Number of cases 
+- Number of cases
+- Cumulated Number of cases
+- Number of Deaths 
 - Cumulated Number of Deaths
-- Cumulated Normalised Number of Deaths
-- Cumulated Normalised Number of Cases
+- 7-day rolling average of confirmed cases / deaths
 
 All the Datas Are provided as open-data by the [Johns Hopkins University](https://github.com/CSSEGISandData/COVID-19) and [Kaggle](https://www.kaggle.com/tanuprabhu/population-by-country-2020).
 
- ## Set Up 
- 
- Clone this repository 
- ```
- $ git clone https://github.com/marinemnrd/Covid_Dash_OpenSource.git
- ```
+ # Set Up 
  
 Create a python virtual environnemnt and install the requirement.txt package using pip :
 
@@ -26,7 +31,7 @@ Create a python virtual environnemnt and install the requirement.txt package usi
 pip install -r requirements.txt
 ```
 
-## Launching the App
+# Launching the App
 
 Run the following line in the terminal then go to the suggested URL. It will launch the Dashboard locally.
 
@@ -35,12 +40,12 @@ streamlit run app.py
 ```
 Enjoy ! 
 
-## Web 
+# Web 
 
 The project is Hosted by streamlit.
-You can also clic on this [link](https://share.streamlit.io/paulmontecot/covid_dash_opensource/main/main.py) to visualize the dashboard.
+You can also clic on this [link](link) to visualize the dashboard.
 
-## Made with
+# Made with
 
 Here are the programs / software / resources that we used to develop our project.
 
