@@ -51,8 +51,7 @@ st.markdown(("* Fever or chills\n* Cough\n"
 #dfdead = dfdead.applymap(lambda x: x*100000)
 #Merge Dataset with Pop Datas For Division
 #dfmerged = pd.merge(dfdead, dfpop,how = 'inner', left_on = dfdead.index , right_on = dfpop['Country (or dependency)'] )
-#dfmerged = dfmerged.drop(columns=dfmerged.columns[0],
-        )
+#dfmerged = dfmerged.drop(columns=dfmerged.columns[0],)
 #dfmerged = dfmerged.set_index('Country (or dependency)')
 #Divise All Columns to the Population Column for having data*100000/Pop
 #dfnorm = dfmerged.div(dfmerged['Population (2020)'], axis='index')
