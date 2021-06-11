@@ -28,6 +28,7 @@ selectbox = st.sidebar.selectbox('Choose the Type of Datas',('Deaths','Cases','N
 st.title("COVID DASHBOARD")
 st.write("""
 This web application will serve to analyze and visualize the spread of COVID-19""")
+st.image('Covid19.jpeg')
 st.markdown("## Symptoms")
 st.markdown(("* Fever or chills\n* Cough\n"
              "* Shortness of breath or difficulty breathing\n"
