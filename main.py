@@ -8,8 +8,7 @@ from datetime import datetime
 
 #Titles and Mode selections
 st.sidebar.title("About Us")
-st.sidebar.info(
-    """
+st.sidebar.info("""
     The aim of this project is to create an interactive Covid-19 Dashboard. This app is maintained by Team number 6 of the Open Source course for the second semester of Master 1 - Digital Sciences.
     Contributors of this project are Paul Montecot Grall, Marine Menardin and Elizabeth Afolabi.
     """
