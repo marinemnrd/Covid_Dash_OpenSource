@@ -35,6 +35,17 @@ Create a python virtual environnemnt and install the requirement.txt package usi
 ```
 pip install -r requirements.txt
 ```
+
+The requirements.txt contains : 
+
+```
+numpy==1.20.3
+pandas==1.2.4
+plotly==4.14.3
+plotly-express==0.4.1
+streamlit==0.82.0
+```
+
 Open your favourite IDE, open the project and you are ready to launch the app !
 
 # Launching the App
