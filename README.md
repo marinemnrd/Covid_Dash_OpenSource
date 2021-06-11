@@ -7,7 +7,7 @@
 Table of Content
 -----------------
 * [Interactive-Covid-19-Dashboard](#Interactive-Covid-19-Dashboard)
-  * [Project Description](#Project-Description-:clipboard:)
+  * [Project Description](#Project-Description) :clipboard:
   * [Set Up](#Set-Up)
   * [Launching the App](#Launching-the-App)
   * [License](#License)
