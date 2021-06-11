@@ -17,7 +17,7 @@ Table of Content
 
 # Project Description :clipboard:
 
-Covid Open Source Dashboard is an interactive Visualisation tool providing an overview of the evolution of different Covid-19 Pandemic indicators as a function of time. The available Indicators are : 
+Covid Open Source Dashboard is an interactive Visualisation tool providing an overview of the evolution of different Covid-19 Pandemic indicators as a function of time. The available indicators are : 
 
 - Cumulated Number of Cases
 - Cumulated Number of Deaths
