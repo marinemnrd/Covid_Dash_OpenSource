@@ -39,7 +39,7 @@ st.markdown(("* Fever or chills\n* Cough\n"
              "* Nausea or vomiting\n"
              "* Diarrhea"))
 
-dfpop = pd.read_csv(r'C:\Users\CRI User\Documents\GitHub\Covid_Dash_OpenSource\Datas\population_by_country_2020.csv')
+dfpop = pd.read_csv(r'https://github.com/marinemnrd/Covid_Dash_OpenSource/blob/0818ef95771496134f063c2948354b7d20c81306/Datas/population_by_country_2020.csv')
 dfpop = dfpop.iloc[:, 0:2]
 #Read Data
 dfdead = pd.read_csv(r'C:\Users\CRI User\Documents\GitHub\Covid_Dash_OpenSource\Datas\time_series_covid19_deaths_global.csv')
