@@ -25,7 +25,6 @@ selectbox = st.sidebar.selectbox('Choose the Type of Datas',('Deaths','Cases','N
 st.title("COVID DASHBOARD")
 st.write("""
 This web application will serve to analyze and visualize the spread of COVID-19 around the world.""")
-st.image('Covid19.jpeg')
 st.markdown("# A Summary of Covid-19")
 st.write("""
 COVID-19 is a virus caused by acute respiratory syndrome coronavirus 2 (SARS-CoV-2). The COVID-19 pandemic, also known as the coronavirus pandemic, is an ongoing global pandemic of coronavirus disease 2019 (COVID-19), 
