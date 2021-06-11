@@ -12,7 +12,8 @@ Table of Content
   * [Launching the App](#Launching-the-App)
   * [License](#License)
 
-# Project Description
+
+# Project Description :clipboard:
 
 Covid Open Source Dashboard is an interactive Visualisation tool provinding an overview of the evolution of different Covid Pandemic indicators as a function of time. The available Indicators are : 
 - Number of cases
@@ -23,7 +24,8 @@ Covid Open Source Dashboard is an interactive Visualisation tool provinding an o
 
 All the Datas Are provided as open-data by the [Johns Hopkins University](https://github.com/CSSEGISandData/COVID-19) and [Kaggle](https://www.kaggle.com/tanuprabhu/population-by-country-2020).
 
- # Set Up 
+
+ # Set Up :wrench:
 Clone this repository using command 
 
 ```
@@ -48,21 +50,24 @@ streamlit==0.82.0
 
 Open your favourite IDE, open the project and you are ready to launch the app !
 
-# Launching the App
+
+# Launching the App :key:
 
 Run the following line in the terminal then go to the suggested URL. It will launch the Dashboard locally.
 
 ```
 streamlit run main.py
 ```
-Enjoy ! 
+:sparkling_heart: Enjoy ! :sparkling_heart:
 
-# Web 
+
+# Web :computer:
 
 The project is Hosted by streamlit.
 You can also click on this [link](https://share.streamlit.io/paulmontecot/covid_dash_opensource/main/main.py) to visualize the dashboard.
 
-# Made with
+
+# Made with :construction:
 
 Here are the programs / software / resources that we used to develop our project.
 
@@ -74,13 +79,15 @@ Here are the programs / software / resources that we used to develop our project
 * [Jupyter Notebook](https://jupyter.org/) - Open-source web application to create and share code
 * [Deenote](https://deepnote.com/project/CovidDashOpenSource-vWDQOttkRneLrrNERsUCUg/%2Fnotebook.ipynb) - Data Science NoteBook
 
-## Authors
+
+## Authors :crown:
 
 * **Marine** [@MarineMnrd](https://github.com/marinemnrd)
 * **Elysabeth** [@Lily87-hub](https://github.com/Lily87-hub)
 * **Paul** [@paulmontecot](https://github.com/paulmontecot)
 
-## License
+
+## License :white_check_mark:
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
