@@ -16,7 +16,7 @@ st.sidebar.info(
 )
 st.sidebar.title("Comments")
 st.sidebar.info("Feel free to comment on our work or share your thoughts and suggestions about this project. The github link can be found "
-                "[here](https://github.com/marinemnrd/Covid_Dash_OpenSource). " 'The Datas come from [John Hopkins University](https://github.com/CSSEGISandData) and [Kaggle](https://www.kaggle.com/tanuprabhu/population-by-country-2020)')
+                "[here](https://github.com/marinemnrd/Covid_Dash_OpenSource) " 'The Datas come from [John Hopkins University](https://github.com/CSSEGISandData) and [Kaggle](https://www.kaggle.com/tanuprabhu/population-by-country-2020)')
 selectbox = st.sidebar.selectbox('Choose the Type of Datas',('Deaths','Cases','Normalised Deaths', 'Normalised Cases'))
 
 
@@ -26,6 +26,7 @@ st.title("COVID DASHBOARD")
 st.write("""
 This web application will serve to analyze and visualize the spread of COVID-19 around the world.""")
 st.image('Covid19.jpeg')
+st.markdown("# A Summary of Covid-19")
 st.markdown("## Symptoms")
 st.markdown(("* Fever or chills\n* Cough\n"
              "* Shortness of breath or difficulty breathing\n"
