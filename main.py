@@ -39,32 +39,32 @@ st.markdown(("* Fever or chills\n* Cough\n"
              "* Nausea or vomiting\n"
              "* Diarrhea"))
 
-dfpop = pd.read_csv(r'https://github.com/marinemnrd/Covid_Dash_OpenSource/blob/0818ef95771496134f063c2948354b7d20c81306/Datas/population_by_country_2020.csv')
-dfpop = dfpop.iloc[:, 0:2]
+#dfpop = pd.read_csv(r'https://github.com/marinemnrd/Covid_Dash_OpenSource/blob/0818ef95771496134f063c2948354b7d20c81306/Datas/population_by_country_2020.csv')
+#dfpop = dfpop.iloc[:, 0:2]
 #Read Data
-dfdead = pd.read_csv(r'C:\Users\CRI User\Documents\GitHub\Covid_Dash_OpenSource\Datas\time_series_covid19_deaths_global.csv')
+#dfdead = pd.read_csv(r'C:\Users\CRI User\Documents\GitHub\Covid_Dash_OpenSource\Datas\time_series_covid19_deaths_global.csv')
 #Set up Dataset
-dfdead =dfdead.drop(['Lat', 'Long'],axis=1)
-dfdead =dfdead.drop(['Province/State'],axis=1)
-dfdead = dfdead.groupby(['Country/Region']).sum()
+#dfdead =dfdead.drop(['Lat', 'Long'],axis=1)
+#dfdead =dfdead.drop(['Province/State'],axis=1)
+#dfdead = dfdead.groupby(['Country/Region']).sum()
 #Apply the operation for normalisation
-dfdead = dfdead.applymap(lambda x: x*100000)
+#dfdead = dfdead.applymap(lambda x: x*100000)
 #Merge Dataset with Pop Datas For Division
-dfmerged = pd.merge(dfdead, dfpop,how = 'inner', left_on = dfdead.index , right_on = dfpop['Country (or dependency)'] )
-dfmerged = dfmerged.drop(columns=dfmerged.columns[0],
+#dfmerged = pd.merge(dfdead, dfpop,how = 'inner', left_on = dfdead.index , right_on = dfpop['Country (or dependency)'] )
+#dfmerged = dfmerged.drop(columns=dfmerged.columns[0],
         )
-dfmerged = dfmerged.set_index('Country (or dependency)')
+#dfmerged = dfmerged.set_index('Country (or dependency)')
 #Divise All Columns to the Population Column for having data*100000/Pop
-dfnorm = dfmerged.div(dfmerged['Population (2020)'], axis='index')
+#dfnorm = dfmerged.div(dfmerged['Population (2020)'], axis='index')
 #Formating for Plotting
-dfnorm = dfnorm.T.reset_index().reindex()
-dfnorm =dfnorm.rename(columns = {'index':'Date'})
-dfnorm = dfnorm[:-1]
-dfnorm['Date'] = pd.to_datetime(dfnorm['Date']).dt.date
-dfnorm = dfnorm.set_index(['Date'])
-dfnorm = dfnorm.astype(int)
+#dfnorm = dfnorm.T.reset_index().reindex()
+#dfnorm =dfnorm.rename(columns = {'index':'Date'})
+#dfnorm = dfnorm[:-1]
+#dfnorm['Date'] = pd.to_datetime(dfnorm['Date']).dt.date
+#dfnorm = dfnorm.set_index(['Date'])
+#dfnorm = dfnorm.astype(int)
 #Upload the .csv
-df_normdeath = dfnorm
+#df_normdeath = dfnorm
 #dfnormdead.to_csv('Normaliseddead')
 
 
@@ -84,8 +84,8 @@ df_case = pd.read_csv(r'https://raw.githubusercontent.com/marinemnrd/Covid_Dash_
 df_case = df_case.set_index(['Date'])
 df_Death = pd.read_csv(r'https://raw.githubusercontent.com/marinemnrd/Covid_Dash_OpenSource/main/Datas/Clean_Death.csv', parse_dates=['Date'])
 df_Death = df_Death.set_index(['Date'])
-df_normcase = pd.read_csv(r"C:\Users\CRI User\Desktop\Normalisedcase.csv", parse_dates=['Date'])
-df_normcase = df_normcase.set_index(['Date'])
+#df_normcase = pd.read_csv(r"C:\Users\CRI User\Desktop\Normalisedcase.csv", parse_dates=['Date'])
+#df_normcase = df_normcase.set_index(['Date'])
 #df_normdeath = pd.read_csv(r"C:\Users\CRI User\Desktop\Normaliseddead.csv",  parse_dates=['Date'])
 #df_normdeath = df_normdeath.set_index(['Date'])
 
