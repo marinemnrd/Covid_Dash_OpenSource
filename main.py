@@ -32,7 +32,7 @@ The virus was first identified in December 2019 in Wuhan, China. The World Healt
 more than 174 million cases have been confirmed, with more than 3.77 million confirmed deaths attributed to COVID-19, making it one of the deadliest pandemics in history.""")
 st.markdown("## Symptoms")
 st.markdown(("* Fever or chills\n* Cough\n"
-             "* Shortness of breath or difficulty breathing\n"
+             "* Difficulty of breathing\n"
              "* Fatigue\n"
              "* Muscle or body aches\n"
              "* Headache\n"
