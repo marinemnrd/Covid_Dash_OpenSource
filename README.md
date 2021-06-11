@@ -26,7 +26,7 @@ All the Datas Are provided as an Open-Data by the [Johns Hopkins University](htt
 
 
  # Set Up :wrench:
-Clone this repository using command 
+Clone this repository on your command line using 
 
 ```
 git clone https://github.com/marinemnrd/Covid_Dash_OpenSource.git
