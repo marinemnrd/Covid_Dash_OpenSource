@@ -90,9 +90,9 @@ df_Death = df_Death.set_index(['Date'])
 
 
 print (df_case)
-print (df_normcase)
+#print (df_normcase)
 print (df_case.columns)
-print (df_normcase.columns)
+#print (df_normcase.columns)
 #Chart the Datas
 #defaultcol = df_case['France']
 
