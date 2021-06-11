@@ -1,11 +1,8 @@
 import streamlit as st
 import pandas as pd
-# from plotly import plotly
 import plotly.express as px
 import numpy as np
-#import datetime
 import time
-#import datetime
 from datetime import datetime
 
 
@@ -19,7 +16,7 @@ st.sidebar.info(
 )
 st.sidebar.title("Comments")
 st.sidebar.info("Feel free to comment on our work or share your thoughts and suggestions about this project. The github link can be found "
-                "[here](https://github.com/marinemnrd/Covid_Dash_OpenSource) " 'The Datas come from [John Hopkins University](https://github.com/CSSEGISandData) and [Kaggle](https://www.kaggle.com/tanuprabhu/population-by-country-2020)')
+                "[here](https://github.com/marinemnrd/Covid_Dash_OpenSource)" 'The Datas come from [John Hopkins University](https://github.com/CSSEGISandData) and [Kaggle](https://www.kaggle.com/tanuprabhu/population-by-country-2020)')
 selectbox = st.sidebar.selectbox('Choose the Type of Datas',('Deaths','Cases','Normalised Deaths', 'Normalised Cases'))
 
 
